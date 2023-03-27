@@ -4,7 +4,6 @@ workflows:
         triggering:
           events:
             - push
-            - commit
             - tag
             - pull_request
         artifacts:
