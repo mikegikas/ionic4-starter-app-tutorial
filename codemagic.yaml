@@ -8,3 +8,10 @@ workflows:
         name: iOS Sample Workflow
         artifacts:
           - android/app/build/outputs/**/*.apk
+        publishing:
+        email:
+          recipients:
+            - m.gikas@doubleip.com
+          notify:
+            success: true
+            failure: false
