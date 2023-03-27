@@ -1,17 +1,20 @@
 workflows:
     android-workflow-id:
         name: Android Sample Workflow
-        # .......    
-        # .......
-        # .......  
-    ios-workflow-id:
-        name: iOS Sample Workflow
+        triggering:
+          events:
+            - push
+            - commit
+            - tag
+            - pull_request
         artifacts:
           - android/app/build/outputs/**/*.apk
         publishing:
-        email:
-          recipients:
-            - m.gikas@doubleip.com
-          notify:
-            success: true
-            failure: false
+          email:
+            recipients:
+              - m.gikas@doubleip.com
+            notify:
+              success: true
+              failure: false  
+    ios-workflow-id:
+        name: iOS Sample Workflow
